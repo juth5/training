@@ -6,19 +6,41 @@
   <link rel="stylesheet" href="../css/main.css">
   <title>lesson1</title>
   <style>
-    .wrap {
-      width: 500px;
-      height: 500px;
-      border: 1px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .sample-image-wrap {
+      width: 100%;
     }
-    .red-circle {
-      width: 50px;
-      height: 50px;
-      background-color: red;
-      border-radius: 9999px;
+    .sample-img {
+      width: 100%;
+    }
+    .wrap {
+      flex-wrap: wrap;
+      display: flex;
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    .image-wrap {
+      position: relative;
+      width: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+    }
+    .img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .inner-wrap {
+      padding: 0px 8px;
+    }
+    .time {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      color: white;
+      font-size: 12px;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 4px;
+      padding: 2px;
     }
   </style>
 </head>
@@ -30,9 +52,40 @@
 
     </div>
     <div class="container-1280">
-      <h2>lesson1: 黒枠の中央に赤い丸を配置しよう!</h2>
+      <h2>lesson2: カード型の要素を並べて配置しよう!(右下の時間も置いてみよう)</h2>
+      <div>イメージ</div>
+      <div class="sample-image-wrap">
+        <img class="sample-img" src="../img/samle-image.png" alt="">
+      </div>
+
       <div class="wrap">
-        <div class="red-circle"></div>
+        <div class="image-wrap">
+          <div class="inner-wrap">
+            <img class="img" src="../img/宇宙.png" alt="">
+          </div>
+          <div class="time">20:00</div>
+        </div>
+        <div class="image-wrap">
+          <div class="inner-wrap">
+            <img class="img" src="../img/宇宙.png" alt="">
+          </div>
+        </div>
+        <div class="image-wrap">
+          <div class="inner-wrap">
+            <img class="img" src="../img/宇宙.png" alt="">
+          </div>
+        </div>
+        <div class="image-wrap">
+          <div class="inner-wrap">
+            <img class="img" src="../img/宇宙.png" alt="">
+          </div>
+        </div>
+        <div class="image-wrap">
+          <div class="inner-wrap">
+            <img class="img" src="../img/宇宙.png" alt="">
+          </div>
+        </div>
+    
       </div>
 
 
