@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>lesson6</title>
+  <style>
+
+    .element1 {
+      position: relative;
+      width: 256px;
+      text-align: center;
+      border: 1px solid black;
+
+    }
+    .element2 {
+      position: absolute;
+      bottom: -40px;
+      left: 60px;
+      width: 128px;
+      text-align: center;
+      border: 1px solid red;
+      display: none;
+    }
+
+    .element1:hover .element2{
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+    <a href="../top.html">Topへ</a>
+    <div class="container-1280">
+      <h2>lesson6: 要素1にhoverしたら要素2をその真下に表示されるようにしよう!</h2>
+
+      <div class="element1">要素1
+        <div class="element2">要素2</div>
+      </div>
+      
+
+    </div>
+</body>
+</html>
