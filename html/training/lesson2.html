@@ -6,7 +6,20 @@
   <link rel="stylesheet" href="../css/main.css">
   <title>lesson1</title>
   <style>
-
+    .wrap {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .red-circle {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 9999px;
+    }
   </style>
 </head>
 <body>
@@ -17,12 +30,10 @@
 
     </div>
     <div class="container-1280">
-      <h2>lesson1: formタグの中にinputを配置して、typeを変えて表示しよう!</h2>
-      <input type="text">
-      <input type="date">
-      <input type="number">
-      <input type="range" min="0" max="10">
-      <input type="checkbox">
+      <h2>lesson1: 黒枠の中央に赤い丸を配置しよう!</h2>
+      <div class="wrap">
+        <div class="red-circle"></div>
+      </div>
 
 
     </div>

@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     $li.appendChild($a);
     $flexBoxBody.appendChild($li);
   });
-  $flexBoxBody.style.height = 0;
-  $flexBoxBody.style.overflow = "hidden";
+  // $flexBoxBody.style.height = 0;
+  // $flexBoxBody.style.overflow = "hidden";
 });
 
 let titleClick = () => {
+  return ;
   $flexBoxBody.style.height = "289px";
   $flexBoxBody.style.overflow = "visible";
 };
