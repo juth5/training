@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>lesson2</title>
+  <style>
+    .parent {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .child {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      left: 40px;
+      top: 40px;
+      z-index: 10;
+    }
+    .grandchild {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      left: 80px;
+      top: 10px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+    <a href="../top.html">Topへ</a>
+    <div class="container-1280">
+      <h2>lesson2: 要素1、要素3、要素2の順で重ねよう!</h2>
+
+      <div class="parent">要素1
+        <div class="child">要素2</div>
+        <div class="grandchild">要素3</div>
+      </div>
+
+    </div>
+</body>
+</html>
