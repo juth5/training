@@ -1,16 +1,15 @@
 import flexboxDataLength from "./data.js";
-console.log(flexboxDataLength,"flexboxDataLength")
+
 let $flexBoxBody = {};
 let flexBoxData = [];
-let flexBoxLessonNumber = 0;
-let flexBoxTotalQuestionNumber = 12;
 
 document.addEventListener('DOMContentLoaded', function() {
-  for (let i = 1; i <= flexBoxTotalQuestionNumber; i++) {
-    flexBoxLessonNumber = i;
-    let flexBoxUrl = `templates/flexbox/lesson${flexBoxLessonNumber}.html`;
+
+  for (let i = 1; i <= flexboxDataLength; i++) {
+    let flexBoxUrl = `flexbox/lesson${i}.html`;
     flexBoxData.push(flexBoxUrl);
   }
+
   $flexBoxBody = document.getElementById("flexbox-body");
 
   flexBoxData.forEach((item, index) => {
