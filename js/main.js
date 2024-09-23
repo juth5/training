@@ -1,4 +1,5 @@
-
+import flexboxDataLength from "./data.js";
+console.log(flexboxDataLength,"flexboxDataLength")
 let $flexBoxBody = {};
 let flexBoxData = [];
 let flexBoxLessonNumber = 0;
