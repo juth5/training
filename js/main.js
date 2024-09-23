@@ -7,7 +7,7 @@ let flexBoxTotalQuestionNumber = 12;
 document.addEventListener('DOMContentLoaded', function() {
   for (let i = 1; i <= flexBoxTotalQuestionNumber; i++) {
     flexBoxLessonNumber = i;
-    let flexBoxUrl = `flexbox/lesson${flexBoxLessonNumber}.html`;
+    let flexBoxUrl = `templates/flexbox/lesson${flexBoxLessonNumber}.html`;
     flexBoxData.push(flexBoxUrl);
   }
   $flexBoxBody = document.getElementById("flexbox-body");
