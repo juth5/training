@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   flexBoxMenuHeight = $flexBoxBody.offsetHeight;
-  // $flexBoxBody.style.height = 0;
-  // $flexBoxBody.style.overflow = "hidden";
+
 });
 let hoge = () => {
   
@@ -41,11 +40,14 @@ document.getElementById('flexbox-title').addEventListener("click", () => {
 
     if (isOpen) {
       $flexBoxBody.style.height = flexBoxMenuHeight + "px";
-      $flexBoxBody.style.overflow = "visible";
+      
+      $flexBoxBody.style.transition = "height 0.5s ease"; // 高さの変更に0.5秒のアニメーションを適用
 
     }
     else {
       $flexBoxBody.style.height = 0;
+      $flexBoxBody.style.transition = "height 0.5s ease"; // 高さの変更に0.5秒のアニメーションを適用
+
       $flexBoxBody.style.overflow = "hidden";
     }
 });
