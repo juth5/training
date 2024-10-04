@@ -17,16 +17,14 @@
       <button onclick="prevPage()">次へ</button>
     </div>
     <div class="container-1280">
-      <h2>変数personを定義して、objectのkeyにname,valueに名前。keyにage,valueに年齢を格納しよう!(最後にconsole.logで変数の値を出力しよう)</h2>
+      <h2>配列fruitsを定義し、最初の値をmelonに書き換えてその値をconsoleに表示しよう。</h2>
       
     </div>
     <script>
-      let person = {
-        name: "takashi",
-        age: 31,
-      };
-      console.log(person);
-      
+      let fruits = ["apple", "orange", "grape"];
+      fruits[0] = "melon";
+      console.log(fruits[0]);
+
     </script>
 </body>
 </html>

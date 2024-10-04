@@ -17,16 +17,15 @@
       <button onclick="prevPage()">次へ</button>
     </div>
     <div class="container-1280">
-      <h2>変数personを定義して、objectのkeyにname,valueに名前。keyにage,valueに年齢を格納しよう!(最後にconsole.logで変数の値を出力しよう)</h2>
+      <h2>humanというobjectを定義して、nameを書き換えconsoleに値を表示しよう!</h2>
       
     </div>
     <script>
-      let person = {
-        name: "takashi",
-        age: 31,
-      };
-      console.log(person);
-      
+      let human = { name: "takashi", age: 11, hobby: "soccer" };
+      human.name = "fukagawa";
+      human["age"] = 21;
+      console.log(human.name, human["age"]);
+
     </script>
 </body>
 </html>

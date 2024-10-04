@@ -7,17 +7,26 @@ let flexBoxData = [];
 let flexBoxMenuHeight = 0;
 let isOpen = false;
 
+let $js = {};
+let jsData = [];
+let jsDataLength = 13;
+
 document.addEventListener('DOMContentLoaded', function() {
   let title = document.getElementById("title");
   title.innerHTML = `${pathname}のMenu`;
-  
+
   for (let i = 1; i <= flexboxDataLength; i++) {
     let flexBoxUrl = `flexbox/lesson${i}.html`;
     flexBoxData.push(flexBoxUrl);
   }
+  for (let i = 1; i <= jsDataLength; i++) {
+    let jsUrl = `js/lesson${i}.html`;
+    jsData.push(jsUrl);
+  }
 
   $flexBoxBody = document.getElementById("flexbox-body");
-  
+  $js = document.getElementById("js-body");
+
   flexBoxData.forEach((item, index) => {
     let $li = document.createElement('li');
     let $a = document.createElement('a');
@@ -26,13 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
     $li.appendChild($a);
     $flexBoxBody.appendChild($li);
   });
+
+  jsData.forEach((item, index) => {
+    let $li = document.createElement('li');
+    let $a = document.createElement('a');
+    $a.href = item;
+    $a.textContent = `lesson${index + 1}`;
+    $li.appendChild($a);
+    $js.appendChild($li);
+  });
   
   flexBoxMenuHeight = $flexBoxBody.offsetHeight;
 
 });
-let hoge = () => {
-  
-};
+
 
 document.getElementById('flexbox-title').addEventListener("click", () => {
 
