@@ -9,7 +9,7 @@ let isOpen = false;
 
 let $js = {};
 let jsData = [];
-let jsDataLength = 30;
+let jsDataLength = 50;
 
 const currentUrl = window.location.href;
 

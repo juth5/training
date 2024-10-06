@@ -18,17 +18,17 @@
       <button id="next">次へ</button>
     </div>
     <div class="container-1280">
-      <h2>Domを取得しよみよう!</h2>
+      <h2>Domを取得し、テキストを書き換えてみよう!</h2>
       <ul>
         <li>1. 取得したい要素にidを付与しよう。</li>
         <li>2. jsのdocument.getElementById()でdomを参照しよう。</li>
-        <li>3. 取得した要素をconsoleに表示しよう。</li>
+        <li>3. 取得した要素のtextContentに新たなテキストを代入しよう。</li>
       </ul>
       <p id="text">取得する要素</p>
     </div>
     <script>
       let $text = document.getElementById("text");
-      console.log($text);
+      $text.textContent = "書き換えました。";
       
 
 

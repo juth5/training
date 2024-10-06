@@ -18,20 +18,20 @@
       <button id="next">次へ</button>
     </div>
     <div class="container-1280">
-      <h2>Domを取得しよみよう!</h2>
+      <h2>Domにクリックイベントを追加しよう!</h2>
       <ul>
-        <li>1. 取得したい要素にidを付与しよう。</li>
+        <li>1. button要素にidを付与しよう。</li>
         <li>2. jsのdocument.getElementById()でdomを参照しよう。</li>
-        <li>3. 取得した要素をconsoleに表示しよう。</li>
+        <li>3. 取得したDom要素にaddEventListenerでclickイベント追加しよう</li>
+        <li>4. クリックしたらconsoleにクリックしましたと表示しよう!</li>
       </ul>
-      <p id="text">取得する要素</p>
+      <button id="button">button</button>
     </div>
     <script>
-      let $text = document.getElementById("text");
-      console.log($text);
-      
-
-
+      let $button = document.getElementById('button');
+      $button.addEventListener("click", () => {
+        console.log("クリックしました。");
+      });      
     </script>
 </body>
 </html>
