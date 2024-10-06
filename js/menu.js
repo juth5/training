@@ -9,7 +9,10 @@ let isOpen = false;
 
 let $js = {};
 let jsData = [];
-let jsDataLength = 13;
+let jsDataLength = 30;
+
+const currentUrl = window.location.href;
+
 
 document.addEventListener('DOMContentLoaded', function() {
   let title = document.getElementById("title");
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   flexBoxMenuHeight = $flexBoxBody.offsetHeight;
 
+  console.log(currentUrl);
 });
 
 

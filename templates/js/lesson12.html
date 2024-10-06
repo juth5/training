@@ -17,18 +17,18 @@
       <button onclick="prevPage()">次へ</button>
     </div>
     <div class="container-1280">
-      <h2>if文を書いてみよう。変数isNewにtrueを代入してif文で分岐しよう。trueであればconsoleにOK。falseの場合はNOと表示しよう。</h2>
+      <h2>変数同士を比較してみよう。</h2>
       
     </div>
     <script>
-      let isNew = true;
+      let word1 = "takashi";
+      let word2 = "takako";
+      let word3 = "takashi";
 
-      if (isNew) {
-        console.log("OK");
-      }
-      else {
-        console.log("NO");
-      }
+      console.log(word1 === word2);
+
+      console.log(word1 === word3);
+
 
     </script>
 </body>
