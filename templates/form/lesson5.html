@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>lesson4</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+    }
+    .img-wrap {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .element {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="img-wrap">
+    <img class="img" src="../img/宇宙.png" alt="">
+    <div class="element">
+      <a href="../index.html">Menuへ</a>
+      <div>
+        <button onclick="nextPage()">前へ</button>
+        <button onclick="prevPage()">次へ</button>
+      </div>
+      <div class="container-1280">
+        <h2>lesson5: ヒーローイメージを設定しよう!</h2>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

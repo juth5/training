@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script type="module" src="../../js/position.js"></script>
+  
+  <title>lesson3</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+    <a href="../index.html">Menuへ</a>
+    <div>
+      <button id="prev">前へ</button>
+      <button id="next">次へ</button>
+    </div>
+    <div class="container-1280">
+      <h2>buttonをクリックしたら、要素を新たに生成して追加しよう!</h2>
+      <ul>
+        <li>1. button要素にidを付与しよう。</li>
+        <li>2. document.getElementById()でDomを参照しよう。</li>
+        <li>3. 取得したDom要素にaddEventListenerでclickイベント追加しよう</li>
+        <li>4. クリックしたら要素を追加する関数を呼び出そう</li>
+        <li>5. 追加する関数内でcreateElementで要素を生成しよう</li>
+        <li>6. 生成した要素をappendChildで指定した要素の配下に追加しよう</li>
+      </ul>
+      <button id="button">button</button>
+      <ul id="ul"></ul>
+    </div>
+    <script>
+      let $button = document.getElementById('button');
+
+      $button.addEventListener("click", () => {
+        addElement();
+      });
+      let addElement = () => {
+        let $li = document.createElement('li');
+        $li.textContent = '生成しました';
+        let $ul = document.getElementById('ul');
+        $ul.appendChild($li);
+      };  
+    </script>
+</body>
+</html>

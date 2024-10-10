@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>lesson8</title>
+  <style>
+    html, body {
+      height: 100%; /* 全体の高さを100%にする */
+      margin: 0;
+    }
+    
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .mta {
+      margin-top: auto !important;
+    }
+
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 0px 20px;
+      background-color: aqua;
+    }
+
+    .w-40per {
+      width: 40%;
+    }
+    .w-20per {
+      width: 20%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <a href="../index.html">Menuへ</a>
+      <div>
+        <button onclick="nextPage()">前へ</button>
+        <button onclick="prevPage()">次へ</button>
+      </div>
+    </div>
+    <div class="container-1280">
+      <h2>lesson8: footerを配置しよう!</h2>
+
+
+
+    </div>
+    <div class="mta">
+      <footer>
+        <div class="footer-wrap">
+          <div class="w-40per">home</div>
+          <div class="w-20per">会社概要</div>
+          <div class="w-20per">利用規約</div>
+          <div class="w-20per">お問い合わせ</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  
+
+
+      
+
+</body>
+</html>

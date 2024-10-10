@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script type="module" src="../../js/position.js"></script>
+
+  
+  <title>lesson3</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+    <a href="../index.html">Menuへ</a>
+    <div>
+      <button id="prev">前へ</button>
+      <button id="next">次へ</button>
+    </div>
+    <div class="container-1280">
+      <h2>配列fruitsを定義して中身を繰り返し分で回してconsoleに表示してみよう!for文、while文、forEach文</h2>
+    </div>
+    <script>
+      let fruits = ['apple', 'orange', 'grape'];
+      let count = 0;
+      
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+      }
+
+      while(count < fruits.length) {
+        console.log(fruits[count]);
+        count++;
+      }
+
+      fruits.forEach((item) => {
+        console.log(item);
+      });
+
+    </script>
+</body>
+</html>
