@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script type="module" src="../../js/position.js"></script>
+  
+  <title>lesson3</title>
+  <style>
+.wrap {
+        display: flex;
+        align-items: center;
+      }
+      .mainImageWrap {
+        display: flex;
+        align-items: center;
+        width: 256px;
+        height: 256px;
+        border: 1px solid black;
+      }
+      .mainImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .imageWrap {
+        display: flex;
+        width: 700px;
+      }
+      .imageCover {
+        width: 128px;
+        height: 128px;
+        margin-right: 4px;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .heigh-light {
+        border: 2px solid orange;
+      }
+  </style>
+</head>
+<body>
+    <a href="../index.html">Menuへ</a>
+    <div>
+      <button id="prev">前へ</button>
+      <button id="next">次へ</button>
+    </div>
+    <div class="container-1280">
+      <h2>商品のスライドショーを作ってみよう!</h2>
+      <div class="wrap"> 
+        <div id='pre'>⬅️</div>
+        <div class="mainImageWrap">
+          <img class="mainImage" id='mainImage' src="" alt="" />
+        </div>
+        <div id='next1'>➡️</div>
+        
+      </div>
+  
+      <div id="imageWrap" class='imageWrap'></div>
+    </div>
+    <script>
+      let images = [
+        "https://sc3.locondo.jp/contents/commodity_image/NI/NI1757BW57244_1_l.jpg",
+        "https://cdn.store.alpen-group.jp/images/goods/4303560214-001616641/4303560214-001616641_7387_1_20240403184006_L.jpg",
+        "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7bb8f96d-0a2c-4b02-84ca-cf1bad3f183a/AIR+ZOOM+PEGASUS+41+OLY.png",
+        "https://sc3.locondo.jp/contents/commodity_image/NI/NI1757BM60719_1_l.jpg",
+        "https://makeshop-multi-images.akamaized.net/ushida/itemimages/000000002391_WwwGDhm.jpg",
+      ];
+        let $imageWrap = {};
+        let $mainImage = {};
+        let $pre = {};
+        let $next = {};
+        let currentImageNumber = 0;
+
+      document.addEventListener('DOMContentLoaded', function() {
+        $imageWrap = document.getElementById('imageWrap');
+        $mainImage = document.getElementById('mainImage');
+        $pre = document.getElementById('pre');
+        $next = document.getElementById('next1');
+        currentImageNumber = 0;
+        images.forEach((image, index) => {
+          let div = document.createElement('div');
+          div.classList.add('imageCover');
+          div.addEventListener('click', () => {
+            currentImageNumber = index;
+            changeImage(image);
+          })
+          let img = document.createElement('img');
+          img.src = image;
+          img.classList.add('image');
+          img.setAttribute('data-index', index);
+          div.appendChild(img);
+          $imageWrap.appendChild(div);
+        });
+        
+        $pre.addEventListener('click', () => {
+          currentImageNumber--;
+          if (currentImageNumber === -1) {
+            currentImageNumber = images.length - 1;
+          }
+          let image = images[currentImageNumber];
+          changeImage(image);
+        });
+        $next.addEventListener('click', () => {
+          
+
+
+          currentImageNumber++;
+          if (currentImageNumber === images.length) {
+            currentImageNumber = 0;
+          }
+          let image = images[currentImageNumber];
+            changeImage(image);
+        });
+
+        changeImage(images[0]);
+      });
+      
+      
+      let changeImage = (image) => {
+        $mainImage.src = image;
+        setHighlights();
+      };
+      
+      
+      let setHighlights = (image) => {
+        let $images = document.querySelectorAll('.image');
+        Array.from($images).forEach((image) => {
+          if (image.getAttribute('data-index') == currentImageNumber) {
+            image.classList.add('heigh-light');
+          }
+          else {
+            
+            image.classList.remove('heigh-light');
+          }
+        })
+      };
+      
+      
+    </script>
+</body>
+</html>

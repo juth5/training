@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script type="module" src="../../js/position.js"></script>
+  
+  <title>lesson3</title>
+  <style>
+    .img {
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+    <a href="../index.html">Menuへ</a>
+    <div>
+      <button id="prev">前へ</button>
+      <button id="next">次へ</button>
+    </div>
+    <div class="container-1280">
+      <h2>Bingoを作ってみよう!</h2>
+      <table id="table-body"></table>
+      <button onclick="judge()">button</button>
+    </div>
+    <script>
+      let array = [
+        [{ num: 1, isChecked: false }, { num: 2, isChecked: false }, { num: 3, isChecked: false }],
+        [{ num: 4, isChecked: false }, { num: 5, isChecked: false }, { num: 6, isChecked: false }],
+        [{ num: 7, isChecked: false }, { num: 8, isChecked: false }, { num: 9, isChecked: false }],
+      ];
+      let $tableBody = document.getElementById('table-body');
+
+      array.forEach((item) => {
+        let $tr = document.createElement('tr');
+        item.forEach((num) => {
+          let $td = document.createElement('td');
+          $td.textContent = num.num;
+          $td.addEventListener('click', () => {
+            num.isChecked = true;
+            $td.style.color = "red";
+            judge();
+          });
+          $tr.appendChild($td);
+        });
+        $tableBody.appendChild($tr);
+      });
+
+      let judge = () => {
+        rowJudge();
+        columnJudge();
+      };
+
+      let rowJudge = () => {
+        array.forEach((item, index) => {
+          if (item.every(i => i.isChecked === true)) {
+            alert('bingo');
+          }
+        })
+      };
+
+      let columnJudge = () => {
+        for (let i = 0; i <= array.length - 1; i++) {
+          let allMarked = true;
+          for (let j = 0; j <= array.length - 1; j++) {
+            if (!array[j][i].isChecked) {
+              allMarked = false;
+              break;
+            }
+          }
+          if (allMarked) {
+            console.log(`${i}番目の列がビンゴです`);
+            alert('bingo');
+          }
+        }
+      };
+
+    </script>
+</body>
+</html>
