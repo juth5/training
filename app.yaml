@@ -1,4 +1,4 @@
-runtime: python39  # 必須。Pythonランタイムを指定しますが、スクリプトは不要です。
+runtime: python39  # 必須
 
 handlers:
   - url: /css
@@ -10,6 +10,17 @@ handlers:
   - url: /js
     static_dir: js
 
-  - url: /.*
+  # flexbox ディレクトリ内の各レッスンページ
+  - url: /flexbox/(.*)
+    static_files: templates/flexbox/\1
+    upload: templates/flexbox/(.*)
+
+  # form ディレクトリ内の各レッスンページ
+  - url: /form/(.*)
+    static_files: templates/form/\1
+    upload: templates/form/(.*)
+
+  # ルートURL（index.html）
+  - url: /
     static_files: index.html
     upload: index.html
